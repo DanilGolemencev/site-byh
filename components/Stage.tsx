@@ -47,7 +47,7 @@ export default function Stage() {
         className="pointer-events-none absolute left-1/2 top-[22vh] h-[70vh] w-[110vw] -translate-x-1/2"
         style={{
           background:
-            "radial-gradient(ellipse 46% 46% at 62% 40%, rgba(96,132,220,0.20), transparent 68%)",
+            "radial-gradient(ellipse 46% 46% at 62% 40%, rgba(161,98,7,0.16), transparent 68%)",
         }}
       />
 
@@ -85,7 +85,7 @@ export default function Stage() {
                 </a>
                 <a
                   href={company.phoneHref}
-                  className="num rounded-full border border-white/20 px-7 py-[14px] text-[15px] font-medium text-paper transition-colors hover:border-white/45"
+                  className="num-ui rounded-full border border-white/20 px-7 py-[14px] text-[15px] font-medium text-paper transition-colors hover:border-white/45"
                 >
                   {company.phone}
                 </a>
@@ -134,7 +134,7 @@ export default function Stage() {
                     />
                   </span>
                 ))}
-                <span className="num ml-2 text-[12px] text-paper-muted">
+                <span className="num-ui ml-2 text-[12px] text-paper-muted">
                   {Math.max(step, 0) + 1} / {STEPS}
                 </span>
               </div>

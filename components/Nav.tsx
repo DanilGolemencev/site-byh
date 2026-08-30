@@ -83,7 +83,7 @@ export default function Nav() {
         <div className="ml-auto flex items-center gap-4 xl:ml-0">
           <a
             href={company.phoneHref}
-            className={`num hidden text-[14px] font-medium transition-colors sm:block ${hoverBrand} ${fg}`}
+            className={`num-ui hidden text-[14px] font-medium transition-colors sm:block ${hoverBrand} ${fg}`}
           >
             {company.phone}
           </a>

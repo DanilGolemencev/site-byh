@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Unbounded, Golos_Text, JetBrains_Mono } from "next/font/google";
+import { Unbounded, Golos_Text, Fraunces } from "next/font/google";
 import Providers from "@/components/Providers";
 import { company } from "@/lib/content";
 import "./globals.css";
@@ -18,10 +18,12 @@ const golos = Golos_Text({
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
-  subsets: ["cyrillic", "latin"],
+/* Только цифры и пунктуация — кириллица Fraunces не нужна: гарнитура
+   используется исключительно через утилиту .num на числовых значениях. */
+const fraunces = Fraunces({
+  subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: "--font-jetbrains",
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -50,7 +52,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0c0f14",
+  themeColor: "#1c1917",
   width: "device-width",
   initialScale: 1,
 };
@@ -81,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="ru"
-      className={`${unbounded.variable} ${golos.variable} ${mono.variable}`}
+      className={`${unbounded.variable} ${golos.variable} ${fraunces.variable}`}
     >
       <body>
         <Providers>{children}</Providers>

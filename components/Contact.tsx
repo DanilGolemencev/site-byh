@@ -154,7 +154,7 @@ export default function Contact() {
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="+7 ___ ___-__-__"
                   autoComplete="tel"
-                  className={`num mt-2 ${field}`}
+                  className={`num-ui mt-2 ${field}`}
                   aria-invalid={touched && phone.trim().length < 5}
                 />
               </div>
@@ -183,7 +183,7 @@ export default function Contact() {
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-[3px] h-4 w-4 shrink-0 cursor-pointer accent-[#e01b62]"
+                className="mt-[3px] h-4 w-4 shrink-0 cursor-pointer accent-[#a16207]"
               />
               <span>
                 Согласен на обработку персональных данных для ответа на заявку
@@ -205,7 +205,7 @@ export default function Contact() {
 
             <p className="mt-4 text-center text-[13px] text-paper-muted">
               Или позвоните:{" "}
-              <a href={company.phoneHref} className="num text-paper transition-colors hover:text-brand-light">
+              <a href={company.phoneHref} className="num-ui text-paper transition-colors hover:text-brand-light">
                 {company.phone}
               </a>
             </p>

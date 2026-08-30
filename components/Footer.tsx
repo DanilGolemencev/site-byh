@@ -36,7 +36,7 @@ export default function Footer() {
           </nav>
 
           <div className="text-[14px] leading-relaxed text-paper/55">
-            <a href={company.phoneHref} className="num block text-paper transition-colors hover:text-brand-light">
+            <a href={company.phoneHref} className="num-ui block text-paper transition-colors hover:text-brand-light">
               {company.phone}
             </a>
             <a

@@ -208,7 +208,7 @@ export default function Calculator() {
                         )}
                       </span>
                       <span className="flex-1 text-[14px] leading-snug text-ink">{s.name}</span>
-                      <span className="num text-[12px] font-medium text-ink-muted">
+                      <span className="num-ui text-[12px] font-medium text-ink-muted">
                         +{Math.round(s.rate * 100)}%
                       </span>
                     </button>

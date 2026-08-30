@@ -74,7 +74,7 @@ export default function Relief() {
                     />
                   </span>
 
-                  <span className="num col-start-2 mt-2 text-[12px] uppercase tracking-[0.1em] text-brand sm:col-start-3 sm:mt-0">
+                  <span className="col-start-2 mt-2 text-[12px] font-medium uppercase tracking-[0.06em] text-brand sm:col-start-3 sm:mt-0">
                     {r.note}
                   </span>
                 </motion.li>

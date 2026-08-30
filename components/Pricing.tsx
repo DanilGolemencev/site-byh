@@ -90,7 +90,7 @@ export default function Pricing() {
                           className={`px-5 py-[15px] align-top sm:px-7 ${
                             ci === 0
                               ? "text-[15px] leading-snug text-ink"
-                              : "num whitespace-nowrap text-right text-[14px] font-medium text-ink/80"
+                              : "num-ui whitespace-nowrap text-right text-[14px] font-medium text-ink/80"
                           }`}
                         >
                           {cell}
