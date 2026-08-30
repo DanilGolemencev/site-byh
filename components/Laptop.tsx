@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
-import { useMediaQuery } from "@/lib/useMediaQuery";
 import Screen from "./Screen";
 
 /* Логический размер экрана. Всё внутри рисуется в этих координатах,
@@ -12,11 +11,16 @@ import Screen from "./Screen";
 const FULL = { w: 1040, h: 580 };
 const COMPACT = { w: 620, h: 480 };
 
+/* Ниже этой отрисованной ширины полная сетка ужимается до нечитаемого,
+   поэтому переключаемся на компактную. Считаем по реальной ширине рамки,
+   а не по вьюпорту: на ландшафтном планшете окно узкое при широком экране. */
+const COMPACT_BELOW = 640;
+
 export default function Laptop({ step }: { step: number }) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
   const reduce = useReducedMotion();
-  const compact = useMediaQuery("(max-width: 767px)");
+  const compact = width > 0 && width < COMPACT_BELOW;
   const size = compact ? COMPACT : FULL;
 
   useEffect(() => {

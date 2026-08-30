@@ -68,7 +68,7 @@ export default function Nav() {
           <span className={`label hidden text-[9px] sm:inline ${muted}`}>Екатеринбург</span>
         </a>
 
-        <nav className="ml-auto hidden items-center gap-7 lg:flex">
+        <nav className="ml-auto hidden items-center gap-7 xl:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -80,7 +80,7 @@ export default function Nav() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-4 lg:ml-0">
+        <div className="ml-auto flex items-center gap-4 xl:ml-0">
           <a
             href={company.phoneHref}
             className={`num hidden text-[14px] font-medium transition-colors sm:block ${hoverBrand} ${fg}`}
@@ -98,7 +98,7 @@ export default function Nav() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label={open ? "Закрыть меню" : "Открыть меню"}
-            className={`flex h-10 w-10 cursor-pointer items-center justify-center lg:hidden ${fg}`}
+            className={`flex h-10 w-10 cursor-pointer items-center justify-center xl:hidden ${fg}`}
           >
             <span className="relative block h-[12px] w-[20px]">
               <span
@@ -118,7 +118,7 @@ export default function Nav() {
 
       {open && (
         <div
-          className={`lg:hidden ${
+          className={`xl:hidden ${
             onDark ? "border-t border-white/10 bg-ink/95" : "border-t border-rule bg-paper/95"
           } backdrop-blur-xl`}
         >
