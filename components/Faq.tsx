@@ -14,7 +14,7 @@ export default function Faq() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.5fr)_minmax(0,1fr)] lg:gap-16">
           <div className="lg:sticky lg:top-[110px] lg:self-start">
-            <p className="label text-brand">Вопросы</p>
+            <p className="label text-brand-deep">Вопросы</p>
             <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)] text-ink">
               О чём спрашивают чаще всего
             </h2>

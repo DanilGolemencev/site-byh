@@ -15,11 +15,15 @@
   --color-ink-muted: #5c574f;
   --color-paper-muted: #9c948e;
 
-  /* Античное золото — сдержанный акцент вместо цвета. Один тон, две плотности
-     под разные фоны: базовый проверен на бумаге (4.71:1), светлый — на графите (7.05:1). */
-  --color-brand: #a16207;
-  --color-brand-light: #c2a05a;
+  /* Античное золото. Два основных значения под разные роли:
+     - brand: яркое золото для заливок (кнопки, акценты на тёмном) —
+       контраст с ink 7.97:1, с ink-текстом на нём — тоже 7.97:1.
+     - brand-deep: тёмное золото для eyebrow-текста на бумаге — 6.11:1.
+     - brand-hover: средний тон между ними для наведения кнопок. */
+  --color-brand: #d4a94a;
+  --color-brand-hover: #c29b3f;
   --color-brand-deep: #8a5205;
+  --color-brand-light: #d4a94a;
   --color-brand-soft: #f5ebd6;
 
   /* Семантика бухгалтерского экрана. */
@@ -54,7 +58,7 @@
 
   ::selection {
     background: var(--color-brand);
-    color: #fff;
+    color: var(--color-ink);
   }
 
   :focus-visible {
@@ -113,16 +117,15 @@
     background-size: 4rem 4rem;
   }
 
-  /* Эркер/подпись-рубрикатор. Раньше — моноширинный шрифт с трекингом 0.16em,
-     из-за которого «БУХГАЛТЕРИЯ · НАЛОГИ» читалось как «В О Т Т А К».
-     Обычная гарнитура текста с умеренным трекингом смотрится собранно,
-     а не разряженно. */
+  /* Eyebrow / подпись-рубрикатор. Без uppercase и wide-tracking —
+     раньше «БУХГАЛТЕРИЯ · НАЛОГИ» читалось как «В О Т Т А К».
+     Теперь обычная гарнитура, естественный кернинг, разборчиво. */
   .label {
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
   }
 }
 

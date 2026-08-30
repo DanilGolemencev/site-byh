@@ -10,7 +10,7 @@ export default function Services() {
     <section id="services" className="bg-paper py-16 sm:py-[12vh]">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div className="max-w-[52ch]">
-          <p className="label text-brand">Услуги</p>
+          <p className="label text-brand-deep">Услуги</p>
           <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)] text-ink">
             Четыре участка, которые закрываем целиком
           </h2>

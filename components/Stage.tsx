@@ -62,7 +62,7 @@ export default function Stage() {
               className={`absolute inset-x-0 top-0 ${inHero ? "" : "pointer-events-none"}`}
               aria-hidden={!inHero}
             >
-              <p className="label text-brand-light">
+              <p className="label text-brand">
                 Бухгалтерия · Налоги · Право — {company.city}
               </p>
               <h1 className="mt-4 text-[clamp(1.95rem,6.4vw,4.15rem)] text-paper sm:mt-5">
@@ -79,7 +79,7 @@ export default function Stage() {
               <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8">
                 <a
                   href="#calculator"
-                  className="rounded-full bg-brand px-7 py-[14px] text-[15px] font-medium text-white transition-colors hover:bg-brand-deep"
+                  className="rounded-full bg-brand px-7 py-[14px] text-[15px] font-medium text-ink transition-colors hover:bg-brand-hover"
                 >
                   Рассчитать стоимость
                 </a>
@@ -108,7 +108,7 @@ export default function Stage() {
                     exit={{ opacity: 0, y: -22 }}
                     transition={{ duration: 0.45, ease }}
                   >
-                    <p className="label text-brand-light">Это делаем за вас</p>
+                    <p className="label text-brand">Это делаем за вас</p>
                     <h2 className="mt-4 text-[clamp(1.75rem,5.2vw,3.5rem)] text-paper sm:mt-5">
                       {active.title}
                     </h2>

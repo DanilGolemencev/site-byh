@@ -47,8 +47,8 @@ export default function Nav() {
 
   const fg = onDark ? "text-paper" : "text-ink";
   const muted = onDark ? "text-paper/65" : "text-ink/60";
-  /* Фуксия на чернильном фоне слишком тёмная — на тёмной шапке светлее. */
-  const hoverBrand = onDark ? "hover:text-brand-light" : "hover:text-brand";
+  /* Яркое золото хорошо читается на графите; на бумаге берём deep-тон. */
+  const hoverBrand = onDark ? "hover:text-brand" : "hover:text-brand-deep";
 
   return (
     <header
@@ -89,7 +89,7 @@ export default function Nav() {
           </a>
           <a
             href="#contact"
-            className="hidden rounded-full bg-brand px-5 py-[9px] text-[14px] font-medium text-white transition-colors hover:bg-brand-deep sm:block"
+            className="hidden rounded-full bg-brand px-5 py-[9px] text-[14px] font-medium text-ink transition-colors hover:bg-brand-hover sm:block"
           >
             Оставить заявку
           </a>
@@ -138,7 +138,7 @@ export default function Nav() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-brand px-5 py-3 text-center text-[15px] font-medium text-white sm:hidden"
+              className="mt-4 rounded-full bg-brand px-5 py-3 text-center text-[15px] font-medium text-ink sm:hidden"
             >
               Оставить заявку
             </a>

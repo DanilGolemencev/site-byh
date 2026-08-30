@@ -56,7 +56,7 @@ function Option({
           : "border-rule bg-white hover:border-ink/25"
       }`}
     >
-      <span className={`block text-[14px] font-medium ${active ? "text-brand-deep" : "text-ink"}`}>
+      <span className={`block text-[14px] font-medium ${active ? "text-brand-deep-deep" : "text-ink"}`}>
         {title}
       </span>
       {hint && <span className="mt-[2px] block text-[12px] text-ink-muted">{hint}</span>}
@@ -100,7 +100,7 @@ export default function Calculator() {
     <section id="calculator" className="bg-paper-2 py-16 sm:py-[12vh]">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div className="max-w-[52ch]">
-          <p className="label text-brand">Стоимость</p>
+          <p className="label text-brand-deep">Стоимость</p>
           <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)] text-ink">
             Посчитайте, во что это обойдётся
           </h2>
@@ -151,7 +151,7 @@ export default function Calculator() {
                     type="button"
                     onClick={() => setStaff((s) => Math.max(0, s - 1))}
                     aria-label="Убрать сотрудника"
-                    className="h-12 w-12 cursor-pointer text-[20px] text-ink-muted transition-colors hover:text-brand"
+                    className="h-12 w-12 cursor-pointer text-[20px] text-ink-muted transition-colors hover:text-brand-deep"
                   >
                     −
                   </button>
@@ -162,7 +162,7 @@ export default function Calculator() {
                     type="button"
                     onClick={() => setStaff((s) => Math.min(60, s + 1))}
                     aria-label="Добавить сотрудника"
-                    className="h-12 w-12 cursor-pointer text-[20px] text-ink-muted transition-colors hover:text-brand"
+                    className="h-12 w-12 cursor-pointer text-[20px] text-ink-muted transition-colors hover:text-brand-deep"
                   >
                     +
                   </button>
@@ -279,7 +279,7 @@ export default function Calculator() {
 
               <a
                 href="#contact"
-                className="mt-8 block rounded-full bg-brand px-6 py-[14px] text-center text-[15px] font-medium text-white transition-colors hover:bg-brand-deep"
+                className="mt-8 block rounded-full bg-brand px-6 py-[14px] text-center text-[15px] font-medium text-ink transition-colors hover:bg-brand-hover"
               >
                 Уточнить у бухгалтера
               </a>
@@ -289,7 +289,7 @@ export default function Calculator() {
               </p>
             </div>
 
-            <p className="mt-5 rounded-xl border border-brand/25 bg-brand-soft px-5 py-4 text-[13px] leading-relaxed text-brand-deep">
+            <p className="mt-5 rounded-xl border border-brand/25 bg-brand-soft px-5 py-4 text-[13px] leading-relaxed text-brand-deep-deep">
               При заключении договора на бухгалтерское обслуживание экспресс-анализ состояния
               налогового и бухгалтерского учёта — в подарок.
             </p>

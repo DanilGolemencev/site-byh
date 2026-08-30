@@ -10,7 +10,7 @@ export default function Process() {
     <section id="process" className="bg-paper py-16 sm:py-[12vh]">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div className="max-w-[48ch]">
-          <p className="label text-brand">Как начинаем</p>
+          <p className="label text-brand-deep">Как начинаем</p>
           <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)] text-ink">
             От звонка до передачи дел — четыре шага
           </h2>
@@ -28,7 +28,7 @@ export default function Process() {
               className="group relative bg-paper p-7 sm:p-8"
             >
               <div className="flex items-baseline gap-4">
-                <span className="num text-[13px] font-medium text-brand">
+                <span className="num text-[13px] font-medium text-brand-deep">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="h-px flex-1 bg-rule" />

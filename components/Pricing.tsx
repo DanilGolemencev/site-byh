@@ -16,7 +16,7 @@ export default function Pricing() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <div className="max-w-[46ch]">
-            <p className="label text-brand">Прайс</p>
+            <p className="label text-brand-deep">Прайс</p>
             <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)] text-ink">Цены целиком</h2>
             <p className="mt-6 text-[16px] leading-relaxed text-ink/60">
               Ничего не прячем за формулировкой «по запросу». Стоимость определяется до заключения

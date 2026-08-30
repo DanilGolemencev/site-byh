@@ -550,7 +550,7 @@ function CursorPlay({ to }: { to: [number, number] }) {
         initial={{ scale: 0, opacity: 0.65 }}
         animate={{ scale: 2.2, opacity: 0 }}
         transition={{ duration: 0.55, delay: 0.5 + T * 0.62, ease: "easeOut" }}
-        className="absolute left-[1px] top-[1px] h-[22px] w-[22px] rounded-full border-2 border-[#a16207]"
+        className="absolute left-[1px] top-[1px] h-[22px] w-[22px] rounded-full border-2 border-[#d4a94a]"
       />
     </motion.div>
   );
@@ -600,7 +600,7 @@ export default function Screen({ step, compact = false }: { step: number; compac
               >
                 <span
                   className={`h-[5px] w-[5px] rounded-full ${
-                    i === safe ? "bg-[#a16207]" : "bg-[#c2c8d1]"
+                    i === safe ? "bg-[#d4a94a]" : "bg-[#c2c8d1]"
                   }`}
                 />
                 {r.name}

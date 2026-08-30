@@ -12,18 +12,17 @@ export default function Relief() {
 
   return (
     <>
-      {/* Свет поднимается: чернильная сцена переходит в лист */}
-      <section className="relative bg-gradient-to-b from-ink via-ink to-paper">
+      {/* Цитата на сплошном тёмном фоне — светлый текст читается на всём диапазоне. */}
+      <section data-dark className="bg-ink">
         <div className="mx-auto max-w-[1400px] px-5 py-24 sm:py-[22vh] sm:px-8">
-          <p className="mx-auto max-w-[24ch] text-center font-[family-name:var(--font-display)] text-[clamp(1.5rem,4.2vw,2.9rem)] font-light leading-[1.14] tracking-tight">
+          <p className="mx-auto max-w-[26ch] text-center font-[family-name:var(--font-display)] text-[clamp(1.5rem,4.2vw,2.9rem)] font-light leading-[1.14] tracking-tight text-paper">
             {words.map((w, i) => (
               <motion.span
                 key={`${w}-${i}`}
-                initial={{ opacity: 0.12 }}
+                initial={{ opacity: 0.28 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: "-15% 0px -25% 0px" }}
                 transition={{ delay: i * 0.045, duration: 0.5, ease }}
-                className="text-ink"
               >
                 {w}{" "}
               </motion.span>
@@ -32,11 +31,14 @@ export default function Relief() {
         </div>
       </section>
 
+      {/* Тонкая переходная полоса ink → paper — сохраняет сигнатуру «свет поднимается». */}
+      <div aria-hidden className="h-16 bg-gradient-to-b from-ink to-paper sm:h-24" />
+
       <section className="bg-paper pb-16 sm:pb-[14vh]">
         <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,0.62fr)_minmax(0,1fr)] lg:gap-16">
             <div className="lg:sticky lg:top-[110px] lg:self-start">
-              <p className="label text-brand">Ведомость</p>
+              <p className="label text-brand-deep">Ведомость</p>
               <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)] text-ink">
                 Что перестаёт
                 <br />
@@ -74,7 +76,7 @@ export default function Relief() {
                     />
                   </span>
 
-                  <span className="col-start-2 mt-2 text-[12px] font-medium uppercase tracking-[0.06em] text-brand sm:col-start-3 sm:mt-0">
+                  <span className="col-start-2 mt-2 text-[13px] font-medium text-brand-deep sm:col-start-3 sm:mt-0">
                     {r.note}
                   </span>
                 </motion.li>

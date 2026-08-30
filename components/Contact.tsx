@@ -54,7 +54,7 @@ export default function Contact() {
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
         <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20">
           <div>
-            <p className="label text-brand-light">Заявка</p>
+            <p className="label text-brand">Заявка</p>
             <h2 className="mt-5 text-[clamp(1.85rem,4.6vw,3.2rem)]">
               Начнём с разговора.
               <br />
@@ -82,7 +82,7 @@ export default function Contact() {
                         href={href as string}
                         target={(href as string).startsWith("http") ? "_blank" : undefined}
                         rel="noopener noreferrer"
-                        className="transition-colors hover:text-brand-light"
+                        className="transition-colors hover:text-brand"
                       >
                         {value}
                       </a>
@@ -115,7 +115,7 @@ export default function Contact() {
                     aria-pressed={topic === t}
                     className={`cursor-pointer rounded-full border px-4 py-2 text-[13px] transition-colors duration-200 ${
                       topic === t
-                        ? "border-brand bg-brand text-white"
+                        ? "border-brand bg-brand text-ink"
                         : "border-white/15 text-paper/70 hover:border-white/40"
                     }`}
                   >
@@ -183,7 +183,7 @@ export default function Contact() {
                 type="checkbox"
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-[3px] h-4 w-4 shrink-0 cursor-pointer accent-[#a16207]"
+                className="mt-[3px] h-4 w-4 shrink-0 cursor-pointer accent-[#d4a94a]"
               />
               <span>
                 Согласен на обработку персональных данных для ответа на заявку
@@ -198,14 +198,14 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="mt-7 w-full cursor-pointer rounded-full bg-brand px-6 py-[15px] text-[15px] font-medium text-white transition-colors hover:bg-brand-deep"
+              className="mt-7 w-full cursor-pointer rounded-full bg-brand px-6 py-[15px] text-[15px] font-medium text-ink transition-colors hover:bg-brand-hover"
             >
               Отправить заявку
             </button>
 
             <p className="mt-4 text-center text-[13px] text-paper-muted">
               Или позвоните:{" "}
-              <a href={company.phoneHref} className="num-ui text-paper transition-colors hover:text-brand-light">
+              <a href={company.phoneHref} className="num-ui text-paper transition-colors hover:text-brand">
                 {company.phone}
               </a>
             </p>

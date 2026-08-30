@@ -55,7 +55,7 @@ export default function Expert() {
 
           {/* Текст */}
           <div className="pt-4 lg:pt-0">
-            <p className="label text-brand-light">Кто за это отвечает</p>
+            <p className="label text-brand">Кто за это отвечает</p>
             <h2 className="mt-5 text-[clamp(1.85rem,4.4vw,3rem)]">{owner.name}</h2>
             <p className="mt-4 max-w-[44ch] text-[16px] leading-relaxed text-paper/65">
               {owner.role}. Больше {owner.years} лет в налогах и учёте. Консультирует, обучает и
@@ -111,7 +111,7 @@ export default function Expert() {
               href={company.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] text-paper/55 transition-colors hover:text-brand-light"
+              className="text-[14px] text-paper/55 transition-colors hover:text-brand"
             >
               {company.telegramName} →
             </a>
@@ -127,7 +127,7 @@ export default function Expert() {
                 transition={{ delay: i * 0.07, duration: 0.5, ease }}
                 className="flex flex-col bg-ink p-7"
               >
-                <span className="label text-brand-light">{n.tag}</span>
+                <span className="label text-brand">{n.tag}</span>
                 <h4 className="mt-4 font-[family-name:var(--font-display)] text-[17px] font-medium leading-snug tracking-tight">
                   {n.title}
                 </h4>
