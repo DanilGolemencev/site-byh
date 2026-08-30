@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { company, insights, owner } from "@/lib/content";
+import { withBasePath } from "@/lib/paths";
 
 const ease = [0.22, 0.61, 0.36, 1] as const;
 
@@ -21,7 +22,7 @@ export default function Expert() {
           >
             <div className="relative aspect-[9/10] overflow-hidden rounded-2xl bg-ink-2">
               <Image
-                src="/media/maria-studio.jpg"
+                src={withBasePath("/media/maria-studio.jpg")}
                 alt="Мария Новикова, собственник компании ПРОФ ЕКБ"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -39,7 +40,7 @@ export default function Expert() {
             >
               <div className="relative aspect-square bg-ink-2">
                 <Image
-                  src="/media/maria-conference.jpg"
+                  src={withBasePath("/media/maria-conference.jpg")}
                   alt="Мария Новикова на Первой Челябинской налоговой конференции «Бизнес 2026»"
                   fill
                   sizes="240px"
@@ -110,7 +111,7 @@ export default function Expert() {
               href={company.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] text-paper/55 transition-colors hover:text-brand-light-light"
+              className="text-[14px] text-paper/55 transition-colors hover:text-brand-light"
             >
               {company.telegramName} →
             </a>

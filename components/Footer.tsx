@@ -28,7 +28,7 @@ export default function Footer() {
               <a
                 key={l.href}
                 href={l.href}
-                className="text-[14px] text-paper/55 transition-colors hover:text-brand-light-light"
+                className="text-[14px] text-paper/55 transition-colors hover:text-brand-light"
               >
                 {l.label}
               </a>
@@ -36,12 +36,12 @@ export default function Footer() {
           </nav>
 
           <div className="text-[14px] leading-relaxed text-paper/55">
-            <a href={company.phoneHref} className="num block text-paper transition-colors hover:text-brand-light-light">
+            <a href={company.phoneHref} className="num block text-paper transition-colors hover:text-brand-light">
               {company.phone}
             </a>
             <a
               href={`mailto:${company.email}`}
-              className="mt-1 block transition-colors hover:text-brand-light-light"
+              className="mt-1 block transition-colors hover:text-brand-light"
             >
               {company.email}
             </a>
@@ -49,7 +49,7 @@ export default function Footer() {
               href={company.telegram}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 block transition-colors hover:text-brand-light-light"
+              className="mt-1 block transition-colors hover:text-brand-light"
             >
               {company.telegramName}
             </a>
@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-[13px] text-paper-muted">
           <p>© {new Date().getFullYear()} Компания «ПРОФ ЕКБ». {company.hours}.</p>
-          <a href="#top" className="transition-colors hover:text-brand-light-light">
+          <a href="#top" className="transition-colors hover:text-brand-light">
             Наверх
           </a>
         </div>

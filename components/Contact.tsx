@@ -82,7 +82,7 @@ export default function Contact() {
                         href={href as string}
                         target={(href as string).startsWith("http") ? "_blank" : undefined}
                         rel="noopener noreferrer"
-                        className="transition-colors hover:text-brand-light-light"
+                        className="transition-colors hover:text-brand-light"
                       >
                         {value}
                       </a>
@@ -205,7 +205,7 @@ export default function Contact() {
 
             <p className="mt-4 text-center text-[13px] text-paper-muted">
               Или позвоните:{" "}
-              <a href={company.phoneHref} className="num text-paper transition-colors hover:text-brand-light-light">
+              <a href={company.phoneHref} className="num text-paper transition-colors hover:text-brand-light">
                 {company.phone}
               </a>
             </p>
